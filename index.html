@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/global.css" />
     <title>Landing Page|| Flixia</title>
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <div class="my-container">
@@ -41,22 +42,39 @@
             </form>
           </nav>
 
-          <!-- Search Icon -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="currentColor"
-            class="search-icon"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-            />
-          </svg>
-          <!-- Search Icon -->
+          <div class="container" >
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          
         </div>
       </header>
+    <nav class="menu">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul>
+        <li><a href="./pages/login.html">Login</a></li>
+        <li><a href="./pages/signup.html">Sign Up</a></li>
+      </ul>
+      <!-- Search Icon -->
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="currentColor"
+      class="search-icon"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+      />
+    </svg>
+    <!-- Search Icon End -->
+    </nav>
       <main>
         <section class="hero">
           <div class="hero-text">
@@ -75,7 +93,7 @@
             </div>
           </div>
           <figure>
-            <video autoplay loop src="./video/streamingVideo.mp4"></video>
+            <video muted autoplay loop src="./video/streamingVideo.mp4"></video>
           </figure>
           <div class="cta">
             <button class="">Play Video</button>
@@ -86,13 +104,13 @@
           <header><h2>Featured Video</h2></header>
           <div class="grid">
             <div>
-              <video autoplay loop src="./video/featured/video1.mp4"></video>
+              <video muted autoplay loop src="./video/featured/video1.mp4"></video>
             </div>
             <div>
-              <video autoplay loop src="./video/featured/video2.mp4"></video>
+              <video muted autoplay loop src="./video/featured/video2.mp4"></video>
             </div>
             <div>
-              <video autoplay loop src="./video/featured/video3.mp4"></video>
+              <video muted autoplay loop src="./video/featured/video3.mp4"></video>
             </div>
           </div>
         </section>

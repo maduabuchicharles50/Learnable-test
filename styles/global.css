@@ -33,7 +33,7 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 a {
@@ -56,11 +56,11 @@ header {
 }
 
 h1 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .search-icon {
-  color: var(--white);
+  color: black;
 }
 
 p {
@@ -77,7 +77,8 @@ button {
   border-radius: 5px;
 }
 
-.video, .audio{
+.video,
+.audio {
   margin: var(--d-spacing) 0;
 }
 
@@ -103,19 +104,18 @@ button {
   margin-top: var(--d-spacing);
 }
 
-.form  a {
+.form a {
   color: black;
 }
 
 .form > .link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .form > .link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .form > div {
@@ -164,18 +164,86 @@ footer {
 }
 
 .bgc-pri {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .bgc-sec {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
-@media screen and (min-width: 600px) {
+/* Hamburger Menu */
 
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--white);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+/* Hamburger Menu End */
+
+.menu {
+    text-align: center;
+    background-color: rgb(230, 224, 230);
+    padding: var(--spacing);
+    display: none;
+    opacity: 0;
+    transition: opacity 4s ease-in-out !important;
+  }
+  
+  .show {
+    opacity: 1;
+    display: block;
+    transition: opacity 4s ease-in-out !important;
+  }
+  
+  .menu > ul {
+    list-style: none;
+  }
+  
+  .menu > ul > li {
+    width: 100%;
+    margin-bottom: var(--spacing);
+  }
+  
+  .menu .search {
+    display: flex;
+  }
+  
+  .menu a {
+    color: black;
+  }
+
+@media screen and (min-width: 600px) {
 }
 
 @media screen and (min-width: 900px) {
+  .container {
+    display: none;
+  }
+
   .main-nav,
   .main-nav > ul,
   .search {
