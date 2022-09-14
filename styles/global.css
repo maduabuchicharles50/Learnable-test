@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300&display=swap");
 :root {
   --font-para: "Roboto", sans-serif;
   --font-header: "Roboto Slab", serif;
@@ -35,6 +35,12 @@ body {
   z-index: 1;
 }
 
+a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--font-para);
+}
+
 .navbar > div {
   display: flex;
   align-items: center;
@@ -45,9 +51,14 @@ header {
   font-family: var(--font-header);
   text-transform: uppercase;
   text-align: center;
+  color: var(--primary);
 }
 
-.search {
+h1 {
+    font-size: 1.5rem;
+}
+
+.search-icon {
   color: var(--white);
 }
 
@@ -57,10 +68,16 @@ p {
 
 button {
   all: unset;
+  padding: 0.5rem 1rem;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 
 section {
-    margin: var(--d-spacing) 0;
+  margin: var(--d-spacing) 0;
 }
 
 .nav-socials {
@@ -78,25 +95,90 @@ section {
   padding: var(--spacing) 0;
 }
 
-footer {
-    padding: 0 var(--spacing);
-    margin-bottom: 60px;
+.form {
+  margin: 0 auto;
+  padding: var(--spacing);
+  max-width: 100%;
 }
 
-footer  .logo {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+.form  a {
+  color: black;
 }
 
-footer {
-    padding-top: var(--spacing);
+.form > .link {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: lightgrey;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form > .link:hover {
+    text-decoration: underline;
+}
+
+.form > div {
+  margin: auto;
+  margin-top: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-btn {
+  background-color: var(--primary);
+  max-width: 100%;
+}
+
+input {
+  height: 40px;
+  padding: 0 var(--spacing);
+}
+
+footer {
+  padding: 0 var(--spacing);
+  margin-bottom: 60px;
+}
+
+footer .logo {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+footer {
+  padding-top: var(--spacing);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgrey;
 }
 
 .copy {
-    color: var(--primary);
+  color: var(--primary);
+}
+
+.main-nav {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .main-nav,
+  .main-nav > ul,
+  .search {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing);
+    align-items: center;
+  }
+
+  .search > p {
+    color: var(--white);
+  }
+
+  .search-icon {
+    display: none;
+  }
+
+  .main-nav {
+    gap: 8rem;
+  }
 }

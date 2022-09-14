@@ -16,11 +16,6 @@
   justify-content: center;
 }
 
-
-.main-nav {
-  display: none;
-}
-
 figure {
   height: 40%;
   max-height: 40%;
@@ -46,11 +41,6 @@ img {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-}
-
-.cta > * {
-  padding: .5rem 1rem;
-  color: var(--white);
 }
 
 .cta > :first-child {

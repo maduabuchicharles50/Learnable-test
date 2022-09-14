@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../images/favicon/favicon.ico"
+      href="./images/favicon/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../styles/login.css">
-    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
     <title>Log In || Flixia</title>
-</head>
-<body>
-    <header>
-        <a href="../index.html"
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="">
+        <a href="/"
           ><img
+            class="logo"
             height="40"
             width="100"
             src="../images/FlixiaLogo.png"
             alt="Flixia Logo"
         /></a>
-        <nav aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-        </nav>
-        <form class="form">
-          <p>Search</p>
-          <input type="search" name="search" id="search" />
-        </form>
-
-        <!-- Login and Signup Navigation -->
-        <nav aria-label="Authencation Navigation">
           <ul>
-            <li><a href="./pages/login.html">Login</a></li>
-            <li><a href="./pages/signup.html">Sign Up</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./signup.html">Sign Up</a></li>
           </ul>
+          <form class="search">
+            <p>Search</p>
+            <input type="search" name="search" id="search" />
+          </form>
         </nav>
-      </header>
-    <h1>Log In</h1>
-    <form>
-        <div class="input"><input type="email" name="" id=""></div>
-        <div class="input"><input type="password" name="" id=""></div>
-        <div class="btn"><button>Login</button></div>
-        
-        <a href="./signup.html">Sign Up</a>
-        <a href="./forgot.html">Forgot Password</a>
+
+        <!-- Search Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          class="search-icon"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+          />
+        </svg>
+        <!-- Search Icon -->
+      </div>
+    </header>
+
+    <form class="form">
+      <header><h1>Log In</h1></header>
+      <div class="input">
+        <label for="email">Email:</label
+        ><input required type="email" name="email" id="email" />
+      </div>
+      <div class="input">
+        <label for="password">Password:</label
+        ><input required type="password" name="password" id="password" />
+      </div>
+      <div><button class="form-btn">Login</button></div>
+
+      <div class="link">
+        <div><a href="./signup.html">Sign Up</a></div>
+        <div><a href="./forgot.html">Forgot Password</a></div>
+      </div>
     </form>
-</body>
+  </body>
 </html>
