@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300&display=swap');
+:root {
+  --font-para: "Roboto", sans-serif;
+  --font-header: "Roboto Slab", serif;
+  --primary: indigo;
+  --secondary: orange;
+  --spacing: 1rem;
+  --d-spacing: 3rem;
+  --white: white;
+}
+
+body {
+  font-family: var(--font-para);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo,
+.footer-logo {
+  height: 40px;
+  width: 120px;
+}
+
+.navbar {
+  padding: var(--spacing);
+  background-color: var(--primary);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  font-family: var(--font-header);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.search {
+  color: var(--white);
+}
+
+p {
+  font-family: var(--font-para);
+}
+
+button {
+  all: unset;
+}
+
+section {
+    margin: var(--d-spacing) 0;
+}
+
+.nav-socials {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  background-color: lightgrey;
+  padding: var(--spacing) 0;
+}
+
+footer {
+    padding: 0 var(--spacing);
+    margin-bottom: 60px;
+}
+
+footer  .logo {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+footer {
+    padding-top: var(--spacing);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightgrey;
+}
+
+.copy {
+    color: var(--primary);
+}
